@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Text Animation</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+ 
+    <p class="ex1">TEXTSTYLE</p>
+    <p class="ex2">Animation.Coding</p>
+    <p class="desc">#animationcoding</p>
+
+
+<script src="jquery.min.js"></script>    
+<script src="textyle.js"></script>
+
+<script>
+$(window).on('load',function(){
+
+$('.ex1').textyle();
+$('.desc').textyle();
+$('.ex2').textyle({
+    duration : 400,
+    delay : 100,
+    easing : 'swing',
+    callback :
+function(){
+    $(this).css({
+        color : '#ff5050',
+        transition :'1s',
+    });
+    $('.desc').css('opacity',1);
+}
+
+});
+
+});
+
+
+
+</script>
+
+
+
+</body>
+</html>
